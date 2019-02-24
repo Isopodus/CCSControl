@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     lateinit var sp: SharedPreferences
     private var countersArray = ArrayList<String>()
-    private var countersData = JSONArray()
     private var isActive = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,9 +57,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val edge = mEdgeSize.getInt(draggerObj)
         mEdgeSize.setInt(draggerObj, edge * 5)
 
-        //-- get data --//
-        updateData()
-
         //open info fragment by default
         nav_view.setNavigationItemSelectedListener(this)
         nav_view.setCheckedItem(R.id.nav_home)
@@ -72,6 +68,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         //set username
         nav_view.getHeaderView(0).usernameView.text = sp.getString("USERNAME", "null")
+
+        //-- get data --//
+        updateData()
 
         //refresh every 30 sec
         scheduledRefresh()
@@ -128,11 +127,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val transaction = supportFragmentManager.beginTransaction()
         val fragment = InfoFragment()
 
-        //put preloaded counters data
-        val bundle = Bundle()
-        bundle.putString("countersData", countersData.toString())
-        fragment.arguments = bundle
-
         transaction.replace(R.id.fragment_container, fragment,"infoFragment")
         transaction.addToBackStack(null)
         transaction.commit()
@@ -162,13 +156,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun updateData(){
         val transaction = supportFragmentManager.beginTransaction()
         countersArray = getCounters()
-        countersData = getMainInfo(Date())
 
         //refresh info fragment
         val oldFragInfo = supportFragmentManager.findFragmentByTag("infoFragment") as?  InfoFragment
-        if(oldFragInfo != null && oldFragInfo.isVisible) {
-            oldFragInfo.setInfo(countersData, oldFragInfo.view!!.findViewById(R.id.scrollLinearLayout)) //reload tiles
-        }
+        if(oldFragInfo != null && oldFragInfo.isVisible)
+            oldFragInfo.getInfo(Date())
 
         /*//refresh settings fragment
         val oldFragSettings = supportFragmentManager.findFragmentByTag("settingsFragment")
@@ -176,77 +168,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             openSettingsFragment()
         }*/
 
-        if(isActive) {
-            transaction.addToBackStack(null)
-            transaction.commit()
-        }
-    }
-
-    private fun getMainInfo(date : Date) : JSONArray {
-        val username = sp.getString("USERNAME", "null")
-        val sdf = SimpleDateFormat("yyyy-MM-dd")
-        val jsonResponse = JSONArray()
-
-        //get daily portions and straits on all counters
-        thread{
-            try
-            {
-                val payload = mapOf("date" to sdf.format(date),"user" to username)
-                val response = khttp.post(host + "getInfo.php", data = payload)
-
-                if(response.text != "false") {
-                    val unsortedJson = JSONArray(response.text)
-
-                    //sort received data by counter id
-                    val jsonList = ArrayList<JSONObject>()
-                    for (i in 0 until unsortedJson.length())
-                        jsonList.add(unsortedJson.getJSONObject(i))
-                    jsonList.sortWith(Comparator { a, b ->
-                        var valA = String()
-                        var valB = String()
-                        try {
-                            valA = a.get("counter") as String
-                            valB = b.get("counter") as String
-                        } catch (e: JSONException) {
-                            //do something
-                        }
-
-                        valA.compareTo(valB)
-                    })
-                    for (i in 0 until unsortedJson.length())
-                        jsonResponse.put(jsonList[i])
-                }
-            }
-            catch (e: Resources.NotFoundException) {
-                runOnUiThread {
-                    Toast.makeText(
-                        this,
-                        getString(R.string.toast_server),
-                        Toast.LENGTH_SHORT).show()
-                }
-            }
-            catch (e: UnknownHostException) {
-                runOnUiThread {
-                    Toast.makeText(
-                        this,
-                        getString(R.string.toast_network),
-                        Toast.LENGTH_SHORT).show()
-                }
-            }
-            catch (e: ConnectException) {
-                runOnUiThread {
-                    Toast.makeText(
-                        this,
-                        getString(R.string.toast_network),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            }
-            catch (e: Exception) {
-                Log.d("ERR", e.toString())
-            }
-        }
-        return jsonResponse
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 
     private fun getCounters() : ArrayList<String> {
@@ -301,12 +224,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     //refresh tiles every 30 seconds
     private fun scheduledRefresh() {
-        Handler().postDelayed(object : Runnable {
-            override fun run() {
-                updateData()
-                Handler().postDelayed(this, 5000)
-            }
-        }, 5000)
+        if(isActive) {
+            Handler().postDelayed(object : Runnable {
+                override fun run() {
+                    if(isActive) {
+                        updateData()
+                        Handler().postDelayed(this, 5000)
+                    }
+                }
+            }, 5000)
+        }
     }
 
     override fun onBackPressed() {
@@ -338,6 +265,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
     public override fun onStop() {
         super.onStop()
+        isActive = false
+    }
+    public override fun onDestroy() {
+        super.onDestroy()
         isActive = false
     }
 }
