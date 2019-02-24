@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_rectangle_background"
+            android:layout_margin="7dp">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="200dp"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="KRV000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/counterId"
+                    android:fontFamily="@font/flipbash" android:layout_marginTop="12dp"
+                    android:textColor="@android:color/white" android:layout_marginStart="20dp" android:textSize="18sp"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginStart="17dp"
+                    android:layout_marginTop="1dp">
+                <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27sp" app:srcCompat="@drawable/sync"
+                        android:id="@+id/imageView3" android:layout_weight="1"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/syncTime"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/flipbash" android:layout_marginStart="4dp"
+                        android:text="01.01.2019 00:00:00" android:textSize="11sp" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginStart="17dp"
+                    android:layout_marginTop="1dp">
+                <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27sp" app:srcCompat="@drawable/start"
+                        android:id="@+id/imageView4" android:layout_weight="1"/>
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/startTime"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/flipbash" android:layout_marginStart="4dp"
+                        android:text="01.01.2019 00:00:00" android:textSize="11sp" android:layout_marginTop="2dp"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginStart="17dp"
+                    android:layout_marginTop="1dp">
+                <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="27sp" app:srcCompat="@drawable/status_no"
+                        android:id="@+id/statusImage" android:layout_weight="1"/>
+                <TextView
+                        android:text="@string/info_status_err"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/status"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/flipbash" android:layout_marginStart="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_marginTop="22dp"
+                android:layout_marginStart="10dp">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50sp" app:srcCompat="@drawable/cup"
+                        android:id="@+id/imageView6" android:layout_weight="1"/>
+                <TextView
+                        android:text="000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/portionsCount"
+                        android:textColor="@color/colorCup" android:fontFamily="@font/flipbash"
+                        android:textSize="27sp" android:layout_marginStart="6dp"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="50sp" app:srcCompat="@drawable/water"
+                        android:id="@+id/imageView7" android:layout_weight="1"/>
+                <TextView
+                        android:text="000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/straitsCount"
+                        android:textColor="@color/colorWater" android:fontFamily="@font/flipbash"
+                        android:textSize="27sp" android:layout_marginStart="11dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

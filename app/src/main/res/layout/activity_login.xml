@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/colorPrimary"
+                                             tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="228dp"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp" android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"/>
+
+    <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_header"
+            android:textSize="30sp"
+            android:textColor="@color/colorLight1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" android:layout_marginBottom="19dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/linearLayout2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView4"
+            android:layout_marginBottom="148dp">
+        <EditText
+                android:id="@+id/loginView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/login_login"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                android:textColor="@color/colorLight1"
+                android:textColorHint="@color/colorLight2"
+                tools:layout_editor_absoluteY="223dp" tools:layout_editor_absoluteX="85dp"/>
+        <EditText
+                android:id="@+id/passwordView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/login_password"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                android:textColor="@color/colorLight1"
+                android:textColorHint="@color/colorLight2"
+                tools:layout_editor_absoluteY="279dp" tools:layout_editor_absoluteX="84dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout"
+                tools:layout_editor_absoluteY="334dp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+            <Space
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"/>
+            <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:text="@string/login_enter"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/checkBox"
+                    app:layout_constraintHorizontal_bias="0.5" tools:layout_editor_absoluteY="447dp"
+            />
+            <Space
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

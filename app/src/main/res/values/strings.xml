@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">CCS Control</string>
+
+    <!--NAVIGATION DRAWER-->
+    <string name="navigation_drawer_open">Open side menu</string>
+    <string name="navigation_drawer_close">Close side menu</string>
+
+    <string name="nav_communication">Contact</string>
+    <string name="nav_counters">Counter</string>
+    <string name="nav_account">Account</string>
+    <string name="nav_information">Information</string>
+    <string name="nav_state">State</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_send">Send</string>
+    <string name="nav_logout">Logout</string>
+
+    <!--TOOLBAR-->
+    <string name="button_refresh">Refresh</string>
+
+    <!--TOAST-->
+    <string name="toast_network">Unable to get data, check network connection</string>
+    <string name="toast_server">Server inaccessible, try again later</string>
+
+    <!--EMAIL-->
+    <string name="email_email">Send email</string>
+    <string name="email_message1">Message from</string>
+    <string name="email_message2">Counter</string>
+
+    <!--LOGIN ACTIVITY-->
+    <string name="login_header">Sign in</string>
+    <string name="login_login">Login</string>
+    <string name="login_password">Password</string>
+    <string name="login_enter">Sign in</string>
+
+    <!--INFO FRAGMENT-->
+    <string name="info_portions">Portions:</string>
+    <string name="info_straits">Straits:</string>
+    <string name="info_sync">Sync:</string>
+    <string name="info_start">Start:</string>
+    <string name="info_status_ok" translatable="false">ONLINE</string>
+    <string name="info_status_err" translatable="false">OFFLINE</string>
+</resources>
