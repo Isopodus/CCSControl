@@ -25,4 +25,10 @@
     <string name="email_message2">Счетчик</string>
     <string name="info_sync">Синхр.:</string>
     <string name="info_start">Запуск:</string>
+    <string name="state_sync">Синхр.:</string>
+    <string name="state_start">Запуск:</string>
+    <string name="state_temp">Темп.:</string>
+    <string name="state_humid">Влаж.:</string>
+    <string name="state_server">Связь:</string>
+    <string name="state_sd">Память:</string>
 </resources>

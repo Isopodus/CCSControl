@@ -9,10 +9,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.Toast
 import kotlinx.android.synthetic.main.counter_tile.view.*
-import kotlinx.android.synthetic.main.fragment_info.*
 import kotlinx.android.synthetic.main.fragment_info.view.*
 import org.json.JSONArray
 import org.json.JSONObject
@@ -88,7 +86,7 @@ class InfoFragment : Fragment() {
 
                     activity!!.runOnUiThread {
                         //remove old views if they exist and add new
-                        if (view!!.scrollLinearLayout != null) {
+                        if (view?.scrollLinearLayout != null) {
                             view!!.scrollLinearLayout.removeAllViews()
 
                             //create counter tiles

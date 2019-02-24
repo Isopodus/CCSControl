@@ -39,4 +39,14 @@
     <string name="info_start">Start:</string>
     <string name="info_status_ok" translatable="false">ONLINE</string>
     <string name="info_status_err" translatable="false">OFFLINE</string>
+
+    <!--STATE FRAGMENT-->
+    <string name="state_sync">Sync:</string>
+    <string name="state_start">Start:</string>
+    <string name="state_server" >Comm.:</string>
+    <string name="state_server_ok" translatable="false">OK</string>
+    <string name="state_server_err" translatable="false">ERROR</string>
+    <string name="state_sd" >Memory:</string>
+    <string name="state_temp">Temp:</string>
+    <string name="state_humid">Humid.:</string>
 </resources>

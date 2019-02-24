@@ -19,12 +19,9 @@ import khttp.post
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.nav_header_main.view.*
 import org.json.JSONArray
-import org.json.JSONException
-import org.json.JSONObject
 import java.lang.Exception
 import java.net.ConnectException
 import java.net.UnknownHostException
-import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.concurrent.thread
 
@@ -229,10 +226,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 override fun run() {
                     if(isActive) {
                         updateData()
-                        Handler().postDelayed(this, 5000)
+                        Handler().postDelayed(this, 30000)
                     }
                 }
-            }, 5000)
+            }, 30000)
         }
     }
 
