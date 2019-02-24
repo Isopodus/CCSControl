@@ -16,7 +16,7 @@
         <Spinner
                 android:id="@+id/spinner"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:popupBackground="@drawable/rounded_rectangle"
                 android:gravity="top|center"
@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content">
             <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:background="@drawable/rounded_rectangle"
                     android:padding="7dp"
                     android:layout_weight="1" android:layout_margin="10dp">
@@ -46,7 +46,7 @@
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:background="@drawable/rounded_rectangle"
                     android:padding="7dp"
                     android:layout_weight="1" android:layout_margin="10dp">
@@ -66,12 +66,12 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp">
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_height="wrap_content" android:layout_width="match_parent"
-                    android:gravity="center" android:layout_marginBottom="9dp" android:background="@color/colorCup"
-                    android:layout_weight="1">
+                    android:gravity="center" android:layout_marginBottom="7dp" android:background="@color/colorCup"
+                    android:layout_weight="1" android:padding="4dp">
                 <TextView
                         android:layout_width="75dp"
                         android:layout_height="wrap_content" android:id="@+id/textView1" android:textSize="19sp"
@@ -80,21 +80,21 @@
                         android:textAlignment="center" android:layout_weight="1"/>
                 <TextView
                         android:layout_width="75dp"
-                        android:layout_height="wrap_content" android:id="@+id/syncTime" android:textSize="15sp"
+                        android:layout_height="wrap_content" android:id="@+id/syncTime" android:textSize="13sp"
                         android:fontFamily="@font/flipbash" android:textColor="@color/colorLight1"
                         android:text="01.01.2019 00:00:00"
                         android:textAlignment="center" android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/sync"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp" android:id="@+id/imageView10" android:layout_weight="1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" android:id="@+id/imageView10" android:layout_weight="1"
                 />
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="center"
-                    android:layout_marginBottom="9dp" android:background="@color/colorCup" android:layout_weight="1"
-            >
+                    android:layout_marginBottom="7dp" android:background="@color/colorCup" android:layout_weight="1"
+                    android:padding="4dp">
                 <TextView
                         android:layout_width="75dp"
                         android:layout_height="wrap_content" android:id="@+id/textView2" android:textSize="19sp"
@@ -103,21 +103,21 @@
                         android:textAlignment="center" android:layout_weight="1"/>
                 <TextView
                         android:layout_width="75dp"
-                        android:layout_height="wrap_content" android:id="@+id/startupTime" android:textSize="15sp"
+                        android:layout_height="wrap_content" android:id="@+id/startupTime" android:textSize="13sp"
                         android:fontFamily="@font/flipbash" android:textColor="@color/colorLight1"
                         android:text="01.01.2019 00:00:00"
                         android:textAlignment="center" android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/start"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp" android:id="@+id/imageView11" android:layout_weight="1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" android:id="@+id/imageView11" android:layout_weight="1"
                 />
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_height="wrap_content" android:layout_width="match_parent"
-                    android:gravity="center" android:layout_marginBottom="9dp" android:background="@color/colorCup"
-                    android:layout_weight="1">
+                    android:gravity="center" android:layout_marginBottom="7dp" android:background="@color/colorCup"
+                    android:layout_weight="1" android:padding="4dp">
                 <TextView
                         android:layout_width="75dp"
                         android:layout_height="wrap_content" android:id="@+id/textView3" android:textSize="19sp"
@@ -132,15 +132,15 @@
                         android:textAlignment="center" android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/status_no"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp" android:id="@+id/imageView12" android:layout_weight="1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" android:id="@+id/imageView12" android:layout_weight="1"
                 />
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_height="wrap_content" android:layout_width="match_parent"
-                    android:gravity="center" android:layout_marginBottom="9dp" android:background="@color/colorCup"
-                    android:layout_weight="1">
+                    android:gravity="center" android:layout_marginBottom="7dp" android:background="@color/colorCup"
+                    android:layout_weight="1" android:padding="4dp">
                 <TextView
                         android:layout_width="75dp"
                         android:layout_height="wrap_content" android:id="@+id/textView4" android:textSize="19sp"
@@ -155,15 +155,15 @@
                         android:textAlignment="center" android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/sd"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp" android:id="@+id/imageView13" android:layout_weight="1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" android:id="@+id/imageView13" android:layout_weight="1"
                 />
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_height="wrap_content" android:layout_width="match_parent"
-                    android:gravity="center" android:layout_marginBottom="9dp" android:background="@color/colorCup"
-                    android:layout_weight="1">
+                    android:gravity="center" android:layout_marginBottom="7dp" android:background="@color/colorCup"
+                    android:layout_weight="1" android:padding="4dp">
                 <TextView
                         android:layout_width="75dp"
                         android:layout_height="wrap_content" android:id="@+id/textView5" android:textSize="19sp"
@@ -178,15 +178,15 @@
                         android:textAlignment="center" android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/temp"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp" android:id="@+id/imageView14" android:layout_weight="1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" android:id="@+id/imageView14" android:layout_weight="1"
                 />
             </LinearLayout>
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_height="wrap_content" android:layout_width="match_parent"
-                    android:gravity="center" android:layout_marginBottom="9dp" android:background="@color/colorCup"
-                    android:layout_weight="1">
+                    android:gravity="center" android:layout_marginBottom="7dp" android:background="@color/colorCup"
+                    android:layout_weight="1" android:padding="4dp">
                 <TextView
                         android:layout_width="75dp"
                         android:layout_height="wrap_content" android:id="@+id/textView6" android:textSize="19sp"
@@ -201,8 +201,8 @@
                         android:textAlignment="center" android:layout_weight="1"/>
                 <ImageView
                         android:src="@drawable/hum"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp" android:id="@+id/imageView15" android:layout_weight="1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp" android:id="@+id/imageView15" android:layout_weight="1"
                 />
             </LinearLayout>
         </LinearLayout>
