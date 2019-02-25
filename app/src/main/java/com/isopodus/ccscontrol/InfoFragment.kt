@@ -95,16 +95,16 @@ class InfoFragment : Fragment() {
                                     layoutInflater.inflate(R.layout.counter_tile, view!!.scrollLinearLayout, false)
 
                                 //counter id
-                                counterTile.counterId.text = jsonResponse.getJSONObject(i).getString("counter")
+                                counterTile.counterId.text = jsonResponse.getJSONObject(i).optString("counter")
 
                                 //portions and straits
                                 if (jsonResponse.getJSONObject(i).getString("values") != "false") { //if got values
                                     counterTile.portionsCount.text =
                                             jsonResponse.getJSONObject(i).getJSONObject("values")
-                                                .getString("portions") //set portions
+                                                .optString("portions") //set portions
                                     counterTile.straitsCount.text =
                                             jsonResponse.getJSONObject(i).getJSONObject("values")
-                                                .getString("straits") //set straits
+                                                .optString("straits") //set straits
                                     if (counterTile.portionsCount.text == "null")
                                         counterTile.portionsCount.text = "0"
                                     if (counterTile.straitsCount.text == "null")
@@ -116,12 +116,12 @@ class InfoFragment : Fragment() {
 
                                 //sync and startup time
                                 val sync = sdfIn.parse(
-                                    jsonResponse.getJSONObject(i).getJSONObject("time").getString("sync")
+                                    jsonResponse.getJSONObject(i).getJSONObject("time").optString("sync")
                                 )
                                 counterTile.syncTime.text = sdfOut.format(sync)
                                 counterTile.startTime.text = sdfOut.format(
                                     sdfIn.parse(
-                                        jsonResponse.getJSONObject(i).getJSONObject("time").getString("start")
+                                        jsonResponse.getJSONObject(i).getJSONObject("time").optString("start")
                                     )
                                 )
 

@@ -22,7 +22,7 @@
                 android:gravity="top|center"
                 android:background="@drawable/rounded_rectangle" android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
-        />
+                android:minHeight="65dp"/>
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -133,7 +133,7 @@
                 <ImageView
                         android:src="@drawable/status_no"
                         android:layout_width="35dp"
-                        android:layout_height="35dp" android:id="@+id/imageView12" android:layout_weight="1"
+                        android:layout_height="35dp" android:id="@+id/statusImage" android:layout_weight="1"
                 />
             </LinearLayout>
             <LinearLayout

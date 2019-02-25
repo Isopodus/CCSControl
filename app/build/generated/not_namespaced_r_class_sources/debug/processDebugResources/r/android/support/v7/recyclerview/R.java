@@ -115,27 +115,27 @@ public final class R {
         public static final int forever = 0x7f09004d;
         public static final int icon = 0x7f090055;
         public static final int icon_group = 0x7f090056;
-        public static final int info = 0x7f090067;
-        public static final int italic = 0x7f090069;
-        public static final int item_touch_helper_previous_elevation = 0x7f09006a;
-        public static final int left = 0x7f09006c;
-        public static final int line1 = 0x7f09006d;
-        public static final int line3 = 0x7f09006e;
-        public static final int none = 0x7f090084;
-        public static final int normal = 0x7f090085;
-        public static final int notification_background = 0x7f090086;
-        public static final int notification_main_column = 0x7f090087;
-        public static final int notification_main_column_container = 0x7f090088;
-        public static final int right = 0x7f090095;
-        public static final int right_icon = 0x7f090096;
-        public static final int right_side = 0x7f090097;
-        public static final int start = 0x7f0900c0;
-        public static final int tag_transition_group = 0x7f0900cb;
-        public static final int text = 0x7f0900cd;
-        public static final int text2 = 0x7f0900ce;
-        public static final int time = 0x7f0900da;
-        public static final int title = 0x7f0900db;
-        public static final int top = 0x7f0900df;
+        public static final int info = 0x7f090066;
+        public static final int italic = 0x7f090068;
+        public static final int item_touch_helper_previous_elevation = 0x7f090069;
+        public static final int left = 0x7f09006b;
+        public static final int line1 = 0x7f09006c;
+        public static final int line3 = 0x7f09006d;
+        public static final int none = 0x7f090083;
+        public static final int normal = 0x7f090084;
+        public static final int notification_background = 0x7f090085;
+        public static final int notification_main_column = 0x7f090086;
+        public static final int notification_main_column_container = 0x7f090087;
+        public static final int right = 0x7f090094;
+        public static final int right_icon = 0x7f090095;
+        public static final int right_side = 0x7f090096;
+        public static final int start = 0x7f0900bf;
+        public static final int tag_transition_group = 0x7f0900ca;
+        public static final int text = 0x7f0900cc;
+        public static final int text2 = 0x7f0900cd;
+        public static final int time = 0x7f0900d9;
+        public static final int title = 0x7f0900da;
+        public static final int top = 0x7f0900de;
     }
     public static final class integer {
         private integer() {}
@@ -155,7 +155,7 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int status_bar_notification_info_overflow = 0x7f0e0047;
+        public static final int status_bar_notification_info_overflow = 0x7f0e004a;
     }
     public static final class style {
         private style() {}

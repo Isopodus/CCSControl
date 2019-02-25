@@ -933,7 +933,6 @@ id image
 id imageView
 id imageView10
 id imageView11
-id imageView12
 id imageView13
 id imageView14
 id imageView15
@@ -1230,7 +1229,10 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
+string state_celsius
 string state_humid
+string state_null_time
+string state_percent
 string state_sd
 string state_server
 string state_server_err

@@ -49,4 +49,7 @@
     <string name="state_sd" >Memory:</string>
     <string name="state_temp">Temp:</string>
     <string name="state_humid">Humid.:</string>
+    <string name="state_celsius" translatable="false">%1$dC</string>
+    <string name="state_percent" translatable="false">%1$d%%</string>
+    <string name="state_null_time" translatable="false">00.00.0000 00:00:00</string>
 </resources>

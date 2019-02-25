@@ -183,7 +183,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 for (i in 0 until jsonCounters.length())
                 {
-                    countersArray.add(jsonCounters.getJSONObject(i).getString("counter"))
+                    countersArray.add(jsonCounters.getJSONObject(i).optString("counter"))
                 }
                 countersArray.sort()
             }
