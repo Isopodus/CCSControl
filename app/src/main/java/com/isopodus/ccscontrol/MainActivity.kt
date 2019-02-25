@@ -26,12 +26,13 @@ import java.util.*
 import kotlin.concurrent.thread
 
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, MainActivityListener  {
     private val host = "http://ccsystem.in/stat2/ccscontrol/"
 
     lateinit var sp: SharedPreferences
     private var countersArray = ArrayList<String>()
     private var isActive = true
+    private var openedMenu = R.id.nav_home
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,8 +55,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val edge = mEdgeSize.getInt(draggerObj)
         mEdgeSize.setInt(draggerObj, edge * 5)
 
-        //open info fragment by default
+        //set listener
         nav_view.setNavigationItemSelectedListener(this)
+
+        //open info fragment by default
         nav_view.setCheckedItem(R.id.nav_home)
         onNavigationItemSelected(nav_view.menu.findItem(R.id.nav_home))
 
@@ -71,6 +74,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         //refresh every 30 sec
         scheduledRefresh()
+    }
+
+    override fun getOpenedMenu(): Int {
+        return openedMenu
+    }
+
+    override fun setOpenedMenu(id: Int) {
+        openedMenu = id
+        nav_view.setCheckedItem(openedMenu)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -127,19 +139,24 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         transaction.replace(R.id.fragment_container, fragment,"infoFragment")
         transaction.addToBackStack(null)
         transaction.commit()
+
+        openedMenu =  R.id.nav_home
     }
-    private fun openStateFragment() {
+    override fun openStateFragment(chosenCounter: String) {
         val transaction = supportFragmentManager.beginTransaction()
         val fragment = StateFragment()
 
         //put preloaded counters list
         val bundle = Bundle()
         bundle.putStringArrayList("countersArray", countersArray)
+        bundle.putString("chosenCounter", chosenCounter)
         fragment.arguments = bundle
 
         transaction.replace(R.id.fragment_container, fragment,"stateFragment")
         transaction.addToBackStack(null)
         transaction.commit()
+
+        openedMenu =  R.id.nav_state
     }
     private fun openSettingsFragment() {
         val transaction = supportFragmentManager.beginTransaction()
@@ -148,6 +165,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         transaction.replace(R.id.fragment_container, fragment,"settingsFragment")
         transaction.addToBackStack(null)
         transaction.commit()
+
+        openedMenu =  R.id.nav_settings
     }
 
     private fun updateData(){

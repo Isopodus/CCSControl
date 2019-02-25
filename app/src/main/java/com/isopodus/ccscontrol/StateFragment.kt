@@ -1,5 +1,6 @@
 package com.isopodus.ccscontrol
 
+import android.app.Activity
 import android.content.res.Resources
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -27,6 +28,15 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
     private lateinit var sdfIn: SimpleDateFormat
     private lateinit var sdfOut: SimpleDateFormat
 
+    private var listener: MainActivityListener? = null
+
+    override fun onAttach(activity: Activity?) {
+        super.onAttach(activity)
+        if (activity is MainActivityListener) {
+            listener = activity
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,7 +53,14 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
         spinner.adapter = adapter
         spinner.onItemSelectedListener = this
 
+        spinner.setSelection(adapter.getPosition((arguments!!.getString("chosenCounter"))))
+
         return view
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        listener!!.setOpenedMenu(R.id.nav_state)
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -63,7 +80,8 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
                         if( jsonStatus.optString("values") != "false" &&
                             jsonStatus.optString("values") != "null" &&
                             jsonStatus.optString("status") != "false" &&
-                            jsonStatus.optString("status") != "null") {
+                            jsonStatus.optString("status") != "null" &&
+                                portionsCount != null) {
 
                             //values
                             if (jsonStatus.getJSONObject("values").optString("portions") == "null")

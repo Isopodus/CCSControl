@@ -473,6 +473,9 @@ color colorAccent
 color colorAccentTransparent1
 color colorAccentTransparent2
 color colorAccentTransparent3
+color colorAccentTransparentDark1
+color colorAccentTransparentDark2
+color colorAccentTransparentDark3
 color colorCup
 color colorLight1
 color colorLight2
@@ -784,6 +787,7 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background
+drawable counter_tile_selector
 drawable cup
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -826,6 +830,7 @@ drawable notify_panel_notification_icon_bg
 drawable rectangle_background
 drawable rounded_rectangle
 drawable rounded_rectangle_background
+drawable rounded_rectangle_background_dark
 drawable rounded_rectangle_dark
 drawable sd
 drawable shapka

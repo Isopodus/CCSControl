@@ -1,15 +1,13 @@
 package com.isopodus.ccscontrol
 
+import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.res.Resources
-import android.opengl.Visibility
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import kotlinx.android.synthetic.main.counter_tile.view.*
 import kotlinx.android.synthetic.main.fragment_info.*
@@ -23,6 +21,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.concurrent.thread
 import org.json.JSONException
+import kotlinx.android.synthetic.main.activity_main.*
+
 
 class InfoFragment : Fragment() {
 
@@ -32,6 +32,15 @@ class InfoFragment : Fragment() {
     private lateinit var sdf: SimpleDateFormat
     private lateinit var sdfIn: SimpleDateFormat
     private lateinit var sdfOut: SimpleDateFormat
+
+    private var listener: MainActivityListener? = null
+
+    override fun onAttach(activity: Activity?) {
+        super.onAttach(activity)
+        if (activity is MainActivityListener) {
+            listener = activity
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -52,6 +61,11 @@ class InfoFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         getInfo(Date())
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        listener!!.setOpenedMenu(R.id.nav_home)
     }
 
     fun getInfo(date : Date) {
@@ -138,9 +152,18 @@ class InfoFragment : Fragment() {
                                     counterTile.status.text = getString(R.string.info_status_ok)
                                 }
                                 view!!.scrollLinearLayout.addView(counterTile)
+
+                                //open chosen counter in state fragment
+                                counterTile.setOnClickListener {
+                                    if(listener!!.getOpenedMenu() == R.id.nav_home) { //avoid clicks through
+                                        activity!!.nav_view.setCheckedItem(R.id.nav_state)
+                                        listener!!.openStateFragment(counterTile.counterId.text.toString())
+                                    }
+                                }
                             }
                         }
-                        progressBar.visibility = View.GONE
+                        if(progressBar != null)
+                            progressBar.visibility = View.GONE
                     }
                 }
             } catch (e: Resources.NotFoundException) {

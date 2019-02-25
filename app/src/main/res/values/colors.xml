@@ -12,4 +12,8 @@
     <color name="colorAccentTransparent1">#bdac7813</color>
     <color name="colorAccentTransparent2">#bdda981b</color>
     <color name="colorAccentTransparent3">#bdfbae1c</color>
+
+    <color name="colorAccentTransparentDark1">#bd946811</color>
+    <color name="colorAccentTransparentDark2">#bdbf8618</color>
+    <color name="colorAccentTransparentDark3">#bdde9a19</color>
 </resources>

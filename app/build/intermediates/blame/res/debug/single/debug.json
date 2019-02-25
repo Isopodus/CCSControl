@@ -1012,6 +1012,10 @@
         "source": "C:\\Users\\Isopodus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a71144d8bfaa991ebdeceefee1ef8bca\\res\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "G:\\Work\\AS projects\\CCSControl\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_rectangle_background_dark.xml.flat",
+        "source": "G:\\Work\\AS projects\\CCSControl\\app\\src\\main\\res\\drawable\\rounded_rectangle_background_dark.xml"
+    },
+    {
         "merged": "G:\\Work\\AS projects\\CCSControl\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "C:\\Users\\Isopodus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a71144d8bfaa991ebdeceefee1ef8bca\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
@@ -1066,6 +1070,10 @@
     {
         "merged": "G:\\Work\\AS projects\\CCSControl\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "G:\\Work\\AS projects\\CCSControl\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "G:\\Work\\AS projects\\CCSControl\\app\\build\\intermediates\\res\\merged\\debug\\drawable_counter_tile_selector.xml.flat",
+        "source": "G:\\Work\\AS projects\\CCSControl\\app\\src\\main\\res\\drawable\\counter_tile_selector.xml"
     },
     {
         "merged": "G:\\Work\\AS projects\\CCSControl\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
