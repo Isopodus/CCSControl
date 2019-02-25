@@ -986,6 +986,7 @@ id passwordView
 id percent
 id pin
 id portionsCount
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio

@@ -3,6 +3,7 @@ package com.isopodus.ccscontrol
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.res.Resources
+import android.opengl.Visibility
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -11,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import kotlinx.android.synthetic.main.counter_tile.view.*
+import kotlinx.android.synthetic.main.fragment_info.*
 import kotlinx.android.synthetic.main.fragment_info.view.*
 import org.json.JSONArray
 import org.json.JSONObject
@@ -138,6 +140,7 @@ class InfoFragment : Fragment() {
                                 view!!.scrollLinearLayout.addView(counterTile)
                             }
                         }
+                        progressBar.visibility = View.GONE
                     }
                 }
             } catch (e: Resources.NotFoundException) {
