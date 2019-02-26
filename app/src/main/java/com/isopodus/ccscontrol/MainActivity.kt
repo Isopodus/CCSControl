@@ -162,6 +162,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val transaction = supportFragmentManager.beginTransaction()
         val fragment = SettingsFragment()
 
+        //put preloaded counters list
+        val bundle = Bundle()
+        bundle.putStringArrayList("countersArray", countersArray)
+        fragment.arguments = bundle
+
         transaction.replace(R.id.fragment_container, fragment,"settingsFragment")
         transaction.addToBackStack(null)
         transaction.commit()
