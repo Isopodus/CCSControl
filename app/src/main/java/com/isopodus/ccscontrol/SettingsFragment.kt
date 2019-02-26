@@ -9,6 +9,10 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.TextView
+import android.view.Gravity
+
+
 
 class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
@@ -27,10 +31,12 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
         val countersArray = arguments!!.getStringArrayList("countersArray")
-
         val spinner = view.findViewById(R.id.spinner) as Spinner
-        val adapter = ArrayAdapter<String>(this.activity, R.layout.spinner_item, countersArray)
-        adapter.setDropDownViewResource(R.layout.spinner_item)
+
+        val colors = Array(countersArray.size) {_ -> R.color.colorGreen}
+
+        val adapter = SettingsSpinnerAdapter(context!!, R.layout.spinner_state_item, countersArray, colors)
+
         spinner.adapter = adapter
         spinner.onItemSelectedListener = this
 

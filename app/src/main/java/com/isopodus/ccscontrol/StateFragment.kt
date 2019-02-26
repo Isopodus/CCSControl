@@ -48,8 +48,8 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
         val countersArray = arguments!!.getStringArrayList("countersArray")
 
         val spinner = view.findViewById(R.id.spinner) as Spinner
-        val adapter = ArrayAdapter<String>(this.activity, R.layout.spinner_item, countersArray)
-        adapter.setDropDownViewResource(R.layout.spinner_item)
+        val adapter = ArrayAdapter<String>(this.activity, R.layout.spinner_state_item, countersArray)
+        adapter.setDropDownViewResource(R.layout.spinner_state_item)
         spinner.adapter = adapter
         spinner.onItemSelectedListener = this
 
