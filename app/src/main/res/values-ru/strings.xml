@@ -31,4 +31,10 @@
     <string name="state_humid">Влаж.:</string>
     <string name="state_server">Связь:</string>
     <string name="state_sd">Память:</string>
+    <string name="settings_strait_time">Пролив</string>
+    <string name="settings_portion_time">Порция</string>
+    <string name="settings_max_portion_time">2x Порция</string>
+    <string name="settings_volume">Громкость</string>
+    <string name="settings_save">Сохранить</string>
+    <string name="settings_seconds">%1$dсек</string>
 </resources>

@@ -52,4 +52,15 @@
     <string name="state_celsius" translatable="false">%1$dC</string>
     <string name="state_percent" translatable="false">%1$d%%</string>
     <string name="state_null_time" translatable="false">00.00.0000 00:00:00</string>
+
+    <!--SETTINGS FRAGMENT-->
+    <string name="settings_strait_time">Strait</string>
+    <string name="settings_portion_time">Portion</string>
+    <string name="settings_max_portion_time" >2x Portion</string>
+    <string name="settings_volume" >Volume</string>
+    <string name="settings_gss1" translatable="false">GSS1</string>
+    <string name="settings_gss2" translatable="false">GSS2</string>
+    <string name="settings_gss3" translatable="false">GSS3</string>
+    <string name="settings_save" >Save</string>
+    <string name="settings_seconds">%1$dsec</string>
 </resources>

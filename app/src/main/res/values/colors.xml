@@ -16,4 +16,6 @@
     <color name="colorAccentTransparentDark1">#bd946811</color>
     <color name="colorAccentTransparentDark2">#bdbf8618</color>
     <color name="colorAccentTransparentDark3">#bdde9a19</color>
+
+    <color name="colorAcceptGreen">#217f0c</color>
 </resources>
