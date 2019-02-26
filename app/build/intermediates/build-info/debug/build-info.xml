@@ -5,9 +5,8 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="REFLECTION_USED"
     plugin-version="3.2.1"
-    timestamp="1551134843369"
+    timestamp="1551189450940"
     token="-3099643638024997566"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -19,81 +18,51 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="83" />
+        duration="0" />
     <task
         name="verifier"
-        duration="54" />
+        duration="0" />
 
-    <artifact
-        location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
     <artifact
         location="G:\Work\AS projects\CCSControl\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1551127656564"
+        timestamp="1551189287043"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="G:\Work\AS projects\CCSControl\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+        <artifact
+            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
             location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1551132419009"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
             location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
             location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
             location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
             location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
@@ -101,21 +70,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1551134732887"
+        timestamp="1551189450940"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="REFLECTION_USED"
-        timestamp="1551134843369"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
         <artifact
             location="G:\Work\AS projects\CCSControl\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
