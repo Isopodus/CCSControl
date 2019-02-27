@@ -64,6 +64,11 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
+        //animate progress bar
+        if(progressBar != null)
+            progressBar.visibility = View.VISIBLE
+
         thread{
             try
             {
@@ -146,6 +151,10 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
                             statusImage.setImageResource(R.drawable.status_no)
                         }
                     }
+
+                    //make progress bar invisible
+                    if(progressBar != null)
+                        progressBar.visibility = View.INVISIBLE
                 }
             }
             catch (e: Resources.NotFoundException) {

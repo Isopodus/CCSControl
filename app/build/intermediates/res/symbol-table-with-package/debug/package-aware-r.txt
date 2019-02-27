@@ -916,14 +916,6 @@ id dimensions
 id direct
 id disableHome
 id drawer_layout
-id editText
-id editText2
-id editText3
-id editText4
-id editText5
-id editText6
-id editText7
-id editText8
 id edit_query
 id end
 id end_padder
@@ -941,6 +933,10 @@ id fragment_container
 id ghost_view
 id gone
 id groups
+id gss1
+id gss1max
+id gss2
+id gss2max
 id home
 id homeAsUp
 id humid
@@ -982,6 +978,7 @@ id list_item
 id loginBtn
 id loginView
 id masked
+id maxPortionTime
 id media_actions
 id memoryState
 id message
@@ -1009,6 +1006,7 @@ id parent_matrix
 id passwordView
 id percent
 id pin
+id portionTime
 id portionsCount
 id progressBar
 id progress_circular
@@ -1063,6 +1061,7 @@ id startupTime
 id status
 id statusImage
 id status_bar_latest_event_content
+id straitTime
 id straitsCount
 id submenuarrow
 id submit_area
@@ -1110,6 +1109,7 @@ id useLogo
 id usernameView
 id view_offset_helper
 id visible
+id volume
 id withText
 id wrap
 id wrap_content
