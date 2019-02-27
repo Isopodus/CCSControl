@@ -40,15 +40,14 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
         val countersArray = arguments!!.getStringArrayList("countersArray")
+        val keysArray = arguments!!.getIntegerArrayList("keysArray")
         val spinner = view.findViewById(R.id.spinner) as Spinner
 
-        val colors = Array(countersArray.size) { _ -> R.color.colorRed}
-        val rand = Random()
+        val colors = ArrayList<Int>(countersArray.size)
 
-        for(i in 0 until countersArray.size) {
-            if(rand.nextBoolean())
-                colors[i] = R.color.colorRed
-            else
+        for(i in 0 until keysArray.size) {
+            colors.add(R.color.colorRed)
+            if(keysArray[i] == 2)
                 colors[i] = R.color.colorGreen
         }
 

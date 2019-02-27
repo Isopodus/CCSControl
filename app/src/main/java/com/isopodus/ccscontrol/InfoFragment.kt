@@ -92,7 +92,7 @@ class InfoFragment : Fragment() {
                             valA = a.get("counter") as String
                             valB = b.get("counter") as String
                         } catch (e: JSONException) {
-                            //do something
+                            Log.w("ERR", e.toString())
                         }
 
                         valA.compareTo(valB)

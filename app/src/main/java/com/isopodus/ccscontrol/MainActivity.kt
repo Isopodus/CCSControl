@@ -23,6 +23,7 @@ import java.lang.Exception
 import java.net.ConnectException
 import java.net.UnknownHostException
 import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.concurrent.thread
 
 
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     lateinit var sp: SharedPreferences
     private var countersArray = ArrayList<String>()
+    private var keysStates = ArrayList<Int>()
     private var isActive = true
     private var openedMenu = R.id.nav_home
 
@@ -165,6 +167,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         //put preloaded counters list
         val bundle = Bundle()
         bundle.putStringArrayList("countersArray", countersArray)
+        bundle.putIntegerArrayList("keysArray", keysStates)
         fragment.arguments = bundle
 
         transaction.replace(R.id.fragment_container, fragment,"settingsFragment")
@@ -176,7 +179,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun updateData(){
         val transaction = supportFragmentManager.beginTransaction()
-        countersArray = getCounters()
+        getCounters(countersArray, keysStates)
 
         //refresh info fragment
         val oldFragInfo = supportFragmentManager.findFragmentByTag("infoFragment") as?  InfoFragment
@@ -193,23 +196,38 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         transaction.commit()
     }
 
-    private fun getCounters() : ArrayList<String> {
-        val countersArray = ArrayList<String>()
+    private fun getCounters(countersArray: ArrayList<String>, keysStates: ArrayList<Int>)  {
         thread{
             try
             {
                 val username = sp.getString("USERNAME", "null")
 
-                val payload = mapOf("user" to username)
-                val response = post(host + "getCounters.php", data = payload)
+                val payloadUsername = mapOf("user" to username)
+                val responseCounters = post(host + "getCounters.php", data = payloadUsername)
 
-                val jsonCounters = JSONArray(response.text)
+                var jsonCounters = JSONArray()
+                var jsonKeys = JSONArray()
+
+                if(responseCounters.text != "false")
+                    jsonCounters = JSONArray(responseCounters.text)
 
                 for (i in 0 until jsonCounters.length())
                 {
                     countersArray.add(jsonCounters.getJSONObject(i).optString("counter"))
                 }
                 countersArray.sort()
+
+                val countersJsonString = JSONArray(countersArray as Collection<Any>).toString()
+                val payloadCounters = mapOf("counters" to countersJsonString)
+                val responseKeys = post(host + "getKeysStates.php", data = payloadCounters)
+
+                if(responseKeys.text != "false")
+                    jsonKeys = JSONArray(responseKeys.text)
+
+                for (i in 0 until jsonKeys.length())
+                {
+                    keysStates.add(jsonKeys.getJSONObject(i).optInt("keyState"))
+                }
             }
             catch (e: Resources.NotFoundException) {
                 runOnUiThread {
@@ -240,7 +258,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Log.d("ERR", e.toString())
             }
         }
-        return countersArray
     }
 
     //refresh tiles every 30 seconds
