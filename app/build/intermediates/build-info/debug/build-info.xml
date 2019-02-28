@@ -5,9 +5,9 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
+    ir-eligibility="REFLECTION_USED"
     plugin-version="3.2.1"
-    timestamp="1551383592044"
+    timestamp="1551383970613"
     token="-3099643638024997566"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -19,10 +19,10 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="40" />
+        duration="53" />
     <task
         name="verifier"
-        duration="15" />
+        duration="35" />
 
     <artifact
         location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
@@ -101,8 +101,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1551383492134"
+        ir-eligibility="IMPLEMENTED_INTERFACES_CHANGE"
+        timestamp="1551383758524"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="G:\Work\AS projects\CCSControl\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
@@ -110,8 +110,8 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1551383592044"
+        ir-eligibility="REFLECTION_USED"
+        timestamp="1551383970613"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="G:\Work\AS projects\CCSControl\app\build\intermediates\split-apk\debug\slices\slice_8.apk"

@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.res.Resources
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.widget.SwipeRefreshLayout
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -22,7 +23,7 @@ import java.util.*
 import kotlin.concurrent.thread
 
 
-class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener {
+class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefreshLayout.OnRefreshListener {
 
     private val host = "http://ccsystem.in/stat2/ccscontrol/"
     private var listener: MainActivityListener? = null
@@ -56,12 +57,20 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener {
         adapter.notifyDataSetChanged()
         spinner.onItemSelectedListener = this
 
+        val refresh = view.findViewById(R.id.refresh) as SwipeRefreshLayout
+        refresh.setOnRefreshListener(this)
+
         return view
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         listener!!.setOpenedMenu(R.id.nav_settings)
+    }
+
+    override fun onRefresh() {
+        getSettings(spinner.getItemAtPosition(spinner.selectedItemPosition).toString())
+        refresh.isRefreshing = false
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {

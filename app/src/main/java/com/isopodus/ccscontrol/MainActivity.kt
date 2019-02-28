@@ -200,6 +200,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         thread{
             try
             {
+                countersArray.clear()
+                keysStates.clear()
                 val username = sp.getString("USERNAME", "null")
 
                 val payloadUsername = mapOf("user" to username)
