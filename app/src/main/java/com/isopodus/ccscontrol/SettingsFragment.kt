@@ -52,8 +52,8 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener {
         }
 
         val adapter = SettingsSpinnerAdapter(context!!, R.layout.spinner_state_item, countersArray, colors)
-
         spinner.adapter = adapter
+        adapter.notifyDataSetChanged()
         spinner.onItemSelectedListener = this
 
         return view

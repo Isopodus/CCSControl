@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.res.Resources
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.widget.SwipeRefreshLayout
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -22,7 +23,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.concurrent.thread
 
-class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
+class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefreshLayout.OnRefreshListener {
+
     private val host = "http://ccsystem.in/stat2/ccscontrol/"
     private lateinit var sdf: SimpleDateFormat
     private lateinit var sdfIn: SimpleDateFormat
@@ -51,9 +53,13 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
         val adapter = ArrayAdapter<String>(this.activity, R.layout.spinner_state_item, countersArray)
         adapter.setDropDownViewResource(R.layout.spinner_state_item)
         spinner.adapter = adapter
+        adapter.notifyDataSetChanged()
         spinner.onItemSelectedListener = this
 
         spinner.setSelection(adapter.getPosition((arguments!!.getString("chosenCounter"))))
+
+        val refresh = view.findViewById(R.id.refresh) as SwipeRefreshLayout
+        refresh.setOnRefreshListener(this)
 
         return view
     }
@@ -63,8 +69,12 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
         listener!!.setOpenedMenu(R.id.nav_state)
     }
 
-    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+    override fun onRefresh() {
+        getState(spinner.selectedItemPosition)
+        refresh.isRefreshing = false
+    }
 
+    private fun getState(position: Int) {
         //animate progress bar
         if(progressBar != null)
             progressBar.visibility = View.VISIBLE
@@ -72,7 +82,7 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
         thread{
             try
             {
-                val cid = parent!!.getItemAtPosition(position).toString()
+                val cid = spinner!!.getItemAtPosition(position).toString()
 
                 val payload = mapOf("cid" to cid, "date" to sdf.format(Date()))
                 val response = post(host + "getStatus.php", data = payload)
@@ -86,7 +96,7 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
                             jsonStatus.optString("values") != "null" &&
                             jsonStatus.optString("status") != "false" &&
                             jsonStatus.optString("status") != "null" &&
-                                portionsCount != null) {
+                            portionsCount != null) {
 
                             //values
                             if (jsonStatus.getJSONObject("values").optString("portions") == "null")
@@ -186,6 +196,10 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener {
                 Log.d("ERR", e.toString())
             }
         }
+    }
+
+    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        getState(position)
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
