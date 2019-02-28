@@ -24,7 +24,7 @@ import org.json.JSONException
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class InfoFragment : Fragment() {
+class InfoFragment : Fragment()/*, SwipeRefreshLayout.OnRefreshListener*/ {
 
     private val host = "http://ccsystem.in/stat2/ccscontrol/"
     private lateinit var sp: SharedPreferences
@@ -162,6 +162,7 @@ class InfoFragment : Fragment() {
                                 }
                             }
                         }
+
                         if(progressBar != null)
                             progressBar.visibility = View.GONE
                     }

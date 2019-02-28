@@ -53,8 +53,8 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
         }
 
         val adapter = SettingsSpinnerAdapter(context!!, R.layout.spinner_state_item, countersArray, colors)
-        spinner.adapter = adapter
         adapter.notifyDataSetChanged()
+        spinner.adapter = adapter
         spinner.onItemSelectedListener = this
 
         val refresh = view.findViewById(R.id.refresh) as SwipeRefreshLayout
@@ -74,6 +74,11 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
+        //animate progress bar
+        if(progressBar != null)
+            progressBar.visibility = View.VISIBLE
+
         getSettings(spinner.getItemAtPosition(position).toString())
     }
 
@@ -82,10 +87,6 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
     }
 
     private fun getSettings(cid: String) {
-
-        //animate progress bar
-        if(progressBar != null)
-            progressBar.visibility = View.VISIBLE
 
         //get settings of the counter
         thread{
@@ -137,6 +138,7 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
                         }
 
                         //make progress bar invisible
+                        refresh.isRefreshing = false
                         if(progressBar != null)
                             progressBar.visibility = View.INVISIBLE
                     }

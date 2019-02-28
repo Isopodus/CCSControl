@@ -51,9 +51,9 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
 
         val spinner = view.findViewById(R.id.spinner) as Spinner
         val adapter = ArrayAdapter<String>(this.activity, R.layout.spinner_state_item, countersArray)
+        adapter.notifyDataSetChanged()
         adapter.setDropDownViewResource(R.layout.spinner_state_item)
         spinner.adapter = adapter
-        adapter.notifyDataSetChanged()
         spinner.onItemSelectedListener = this
 
         spinner.setSelection(adapter.getPosition((arguments!!.getString("chosenCounter"))))
@@ -75,10 +75,6 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
     }
 
     private fun getState(position: Int) {
-        //animate progress bar
-        if(progressBar != null)
-            progressBar.visibility = View.VISIBLE
-
         thread{
             try
             {
@@ -163,6 +159,7 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
                     }
 
                     //make progress bar invisible
+                    refresh.isRefreshing = false
                     if(progressBar != null)
                         progressBar.visibility = View.INVISIBLE
                 }
@@ -199,6 +196,11 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
+        //animate progress bar
+        if(progressBar != null)
+            progressBar.visibility = View.VISIBLE
+
         getState(position)
     }
 

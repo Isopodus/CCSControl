@@ -28,6 +28,7 @@ import kotlin.concurrent.thread
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, MainActivityListener  {
+
     private val host = "http://ccsystem.in/stat2/ccscontrol/"
 
     lateinit var sp: SharedPreferences
@@ -269,10 +270,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 override fun run() {
                     if(isActive) {
                         updateData()
-                        Handler().postDelayed(this, 30000)
+                        Handler().postDelayed(this, 10000)
                     }
                 }
-            }, 30000)
+            }, 10000)
         }
     }
 
