@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\Work\\AS projects\\CCSControl\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "/home/isopodus/StudioProjects/CCSControl/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Isopodus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a71144d8bfaa991ebdeceefee1ef8bca\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "/home/isopodus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8320b0eeb1c258e46f0bbd0113bca3db/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

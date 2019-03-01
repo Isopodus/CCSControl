@@ -108,7 +108,9 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
                         val gss2maxString = jsonResponse.optString("gss2max")
 
                         //check for nulls and set text
-                        if(straitTimeString != "null" &&
+                        if(
+                            straitTime != null &&
+                            straitTimeString != "null" &&
                             portionTimeString != "null" &&
                             maxPortionTimeString != "null" &&
                             volumeString != "null" &&

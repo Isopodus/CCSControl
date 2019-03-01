@@ -1,169 +1,169 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:2:1-54:12
-MERGED from [com.android.support:design:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\d35433e868275418cf0a2e4b39a363a5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\a71144d8bfaa991ebdeceefee1ef8bca\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\eb25327d6cfa3bf442e2fa7932914c28\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\51cb57b22d6e809dcef8c5a192e5eb55\AndroidManifest.xml:2:1-11:12
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\android-gif-drawable-1.2.10.aar\3d6c5cdb60fbe6ad1962c7adf890273d\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\66835a38f31a3c50074ef3e2e52a07f4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\dacd4faf043dff4b3681df9ea995e323\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\fe7728497f9ccfac2fbeab157d9ab001\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\11617ccca1acc3c4e09aecd6b4575511\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\f632e5cf4542b1b50a0fc722786d256e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\27e80719f2a452c3f6dca0dfa5edd3a5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\a3cb41ffd49a242af0d27a0f57bfc1ea\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\10babca561c42af4a0f86cdca6c838ef\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\4e37b263177cabc8b7ff642011c014bc\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3780cec684433db7131cd2685a12bd8a\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\909c1ec53bb3022837c4751385c93cfc\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a42b20d99a40fae8b6270b3fef17567a\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\3468061576025cb66dfa5d439f94d2fb\AndroidManifest.xml:17:1-22:12
-INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:2:1-54:12
+ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:2:1-54:12
+MERGED from [com.android.support:design:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2ee58015490087321b670d732aa98e8d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8320b0eeb1c258e46f0bbd0113bca3db/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/9b0d37aad0314cc3501bd577f742d48e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/isopodus/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/777f492d54bf5dba9f80a2c66c75f019/AndroidManifest.xml:2:1-11:12
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] /home/isopodus/.gradle/caches/transforms-1/files-1.1/android-gif-drawable-1.2.10.aar/c989c594283db6314b4cf064236b9b8f/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5aa4f19bf39b524d82b4f16b8eccf104/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5c762363fe31d8d93c9c2f0edd10951a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/04b508fcf1f435aed4cb2be60aa47d7b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/efb70eec4dad78a75ea510381b7d3ca9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/0ea83b8825ce6124d1c210c7e5e8e10e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/0b6b9d2753ca1cbc52246b7be8217a52/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/da8e9fedc7e1ce972dac00f14f2bb353/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/9e09d49f301592e588295ce5b6285d51/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/3155c74250c793fa4c17cdefe54a7255/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/dcd8d071007dd1f8fa26026b54d9efb7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/6729a55f18e0bd0b5f4fed30665c464f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7e24410718788fa028da55cc83303209/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3aaa3e7167686d7ab3319159a7f1259a/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:2:1-54:12
 	package
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:3:58-91
-		INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
-		INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:3:58-91
+		INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
+		INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:2:1-54:12
-		INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
+		INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:2:1-54:12
+		INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:3:11-57
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:3:11-57
 	android:versionCode
-		INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:2:1-54:12
-		INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
+		INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:2:1-54:12
+		INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:5:5-66
+ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:5:5-66
 	android:name
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:7:5-52:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\51cb57b22d6e809dcef8c5a192e5eb55\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\51cb57b22d6e809dcef8c5a192e5eb55\AndroidManifest.xml:9:5-20
+ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:7:5-52:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/isopodus/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/777f492d54bf5dba9f80a2c66c75f019/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/isopodus/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/777f492d54bf5dba9f80a2c66c75f019/AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:12:13-39
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:12:13-39
 	android:label
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:10:13-45
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:10:13-45
 	tools:ignore
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:14:13-52
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:14:13-52
 	android:roundIcon
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:11:13-58
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:11:13-58
 	android:icon
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:9:13-47
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:9:13-47
 	android:allowBackup
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:8:13-39
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:8:13-39
 	android:theme
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:13:13-56
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:13:13-56
 activity#com.isopodus.ccscontrol.SplashScreenActivity
-ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:15:9-26:20
+ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:15:9-26:20
 	android:screenOrientation
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:17:17-53
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:17:17-53
 	android:label
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:19:17-49
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:19:17-49
 	android:configChanges
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:16:17-52
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:16:17-52
 	android:theme
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:20:17-60
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:20:17-60
 	android:name
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:18:17-53
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:18:17-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:24:27-74
 activity#com.isopodus.ccscontrol.MainActivity
-ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:27:9-38:20
+ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:27:9-38:20
 	android:screenOrientation
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:29:17-53
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:29:17-53
 	android:label
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:31:17-49
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:31:17-49
 	android:configChanges
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:28:17-52
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:28:17-52
 	android:theme
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:32:17-60
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:32:17-60
 	android:name
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:30:17-45
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:30:17-45
 intent-filter#action:name:android.intent.action.DEFAULT+category:name:android.intent.category.LAUNCHER
-ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:33:13-37:29
+ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:33:13-37:29
 action#android.intent.action.DEFAULT
-ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:34:17-72
+ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:34:17-72
 	android:name
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:34:25-69
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:34:25-69
 activity#com.isopodus.ccscontrol.LoginActivity
-ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:39:9-51:20
+ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:39:9-51:20
 	android:screenOrientation
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:42:17-53
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:42:17-53
 	android:label
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:44:17-49
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:44:17-49
 	android:windowSoftInputMode
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:40:17-58
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:40:17-58
 	android:configChanges
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:41:17-52
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:41:17-52
 	android:theme
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:45:17-48
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:45:17-48
 	android:name
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml:43:17-46
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml:43:17-46
 uses-sdk
-INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
-INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\d35433e868275418cf0a2e4b39a363a5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\d35433e868275418cf0a2e4b39a363a5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\a71144d8bfaa991ebdeceefee1ef8bca\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\a71144d8bfaa991ebdeceefee1ef8bca\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\eb25327d6cfa3bf442e2fa7932914c28\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\eb25327d6cfa3bf442e2fa7932914c28\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\51cb57b22d6e809dcef8c5a192e5eb55\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\51cb57b22d6e809dcef8c5a192e5eb55\AndroidManifest.xml:5:5-7:41
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\android-gif-drawable-1.2.10.aar\3d6c5cdb60fbe6ad1962c7adf890273d\AndroidManifest.xml:7:5-9:41
-MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\android-gif-drawable-1.2.10.aar\3d6c5cdb60fbe6ad1962c7adf890273d\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\66835a38f31a3c50074ef3e2e52a07f4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\66835a38f31a3c50074ef3e2e52a07f4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\dacd4faf043dff4b3681df9ea995e323\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\dacd4faf043dff4b3681df9ea995e323\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\fe7728497f9ccfac2fbeab157d9ab001\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.1.aar\fe7728497f9ccfac2fbeab157d9ab001\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\11617ccca1acc3c4e09aecd6b4575511\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\11617ccca1acc3c4e09aecd6b4575511\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\f632e5cf4542b1b50a0fc722786d256e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\f632e5cf4542b1b50a0fc722786d256e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\27e80719f2a452c3f6dca0dfa5edd3a5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\27e80719f2a452c3f6dca0dfa5edd3a5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\a3cb41ffd49a242af0d27a0f57bfc1ea\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\a3cb41ffd49a242af0d27a0f57bfc1ea\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\10babca561c42af4a0f86cdca6c838ef\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\transition-27.1.1.aar\10babca561c42af4a0f86cdca6c838ef\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\4e37b263177cabc8b7ff642011c014bc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\4e37b263177cabc8b7ff642011c014bc\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3780cec684433db7131cd2685a12bd8a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\3780cec684433db7131cd2685a12bd8a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\909c1ec53bb3022837c4751385c93cfc\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\909c1ec53bb3022837c4751385c93cfc\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a42b20d99a40fae8b6270b3fef17567a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\a42b20d99a40fae8b6270b3fef17567a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\3468061576025cb66dfa5d439f94d2fb\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Isopodus\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\3468061576025cb66dfa5d439f94d2fb\AndroidManifest.xml:20:5-44
-INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
-INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
+INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
+INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2ee58015490087321b670d732aa98e8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/2ee58015490087321b670d732aa98e8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8320b0eeb1c258e46f0bbd0113bca3db/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8320b0eeb1c258e46f0bbd0113bca3db/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/9b0d37aad0314cc3501bd577f742d48e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/9b0d37aad0314cc3501bd577f742d48e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/isopodus/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/777f492d54bf5dba9f80a2c66c75f019/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/isopodus/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/777f492d54bf5dba9f80a2c66c75f019/AndroidManifest.xml:5:5-7:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] /home/isopodus/.gradle/caches/transforms-1/files-1.1/android-gif-drawable-1.2.10.aar/c989c594283db6314b4cf064236b9b8f/AndroidManifest.xml:7:5-9:41
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.10] /home/isopodus/.gradle/caches/transforms-1/files-1.1/android-gif-drawable-1.2.10.aar/c989c594283db6314b4cf064236b9b8f/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-fragment:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5aa4f19bf39b524d82b4f16b8eccf104/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5aa4f19bf39b524d82b4f16b8eccf104/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5c762363fe31d8d93c9c2f0edd10951a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5c762363fe31d8d93c9c2f0edd10951a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/04b508fcf1f435aed4cb2be60aa47d7b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/04b508fcf1f435aed4cb2be60aa47d7b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/efb70eec4dad78a75ea510381b7d3ca9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/efb70eec4dad78a75ea510381b7d3ca9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/0ea83b8825ce6124d1c210c7e5e8e10e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/0ea83b8825ce6124d1c210c7e5e8e10e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/0b6b9d2753ca1cbc52246b7be8217a52/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/0b6b9d2753ca1cbc52246b7be8217a52/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/da8e9fedc7e1ce972dac00f14f2bb353/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/da8e9fedc7e1ce972dac00f14f2bb353/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/9e09d49f301592e588295ce5b6285d51/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/9e09d49f301592e588295ce5b6285d51/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/3155c74250c793fa4c17cdefe54a7255/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/isopodus/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/3155c74250c793fa4c17cdefe54a7255/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/dcd8d071007dd1f8fa26026b54d9efb7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/dcd8d071007dd1f8fa26026b54d9efb7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/6729a55f18e0bd0b5f4fed30665c464f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/6729a55f18e0bd0b5f4fed30665c464f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7e24410718788fa028da55cc83303209/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7e24410718788fa028da55cc83303209/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3aaa3e7167686d7ab3319159a7f1259a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/isopodus/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3aaa3e7167686d7ab3319159a7f1259a/AndroidManifest.xml:20:5-44
+INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
+INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
-		INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
+		INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
+		INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
-		ADDED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
-		INJECTED from G:\Work\AS projects\CCSControl\app\src\main\AndroidManifest.xml
+		INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
+		ADDED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml
+		INJECTED from /home/isopodus/StudioProjects/CCSControl/app/src/main/AndroidManifest.xml

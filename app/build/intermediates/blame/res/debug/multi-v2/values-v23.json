@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\Work\\AS projects\\CCSControl\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "/home/isopodus/StudioProjects/CCSControl/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Isopodus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\a71144d8bfaa991ebdeceefee1ef8bca\\res\\values-v23\\values-v23.xml",
+                    "source": "/home/isopodus/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/8320b0eeb1c258e46f0bbd0113bca3db/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

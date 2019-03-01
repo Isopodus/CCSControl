@@ -67,7 +67,7 @@
                                 android:inputType="number"
                                 android:id="@+id/straitTime" android:textColor="@color/colorPrimaryDark"
                                 android:background="@android:color/transparent" android:textAlignment="center"
-                                android:fontFamily="@font/flipbash" android:text="6"
+                                android:fontFamily="@font/flipbash" android:text="0"
                                 android:textCursorDrawable="@null"
                                 android:imeOptions="actionDone"/>
                     </LinearLayout>
@@ -94,7 +94,7 @@
                                 android:inputType="number"
                                 android:id="@+id/portionTime" android:textColor="@color/colorPrimaryDark"
                                 android:background="@android:color/transparent" android:textAlignment="center"
-                                android:fontFamily="@font/flipbash" android:text="26"
+                                android:fontFamily="@font/flipbash" android:text="0"
                                 android:textCursorDrawable="@null"
                                 android:imeOptions="actionDone"/>
                     </LinearLayout>
@@ -124,7 +124,7 @@
                                 android:inputType="number"
                                 android:id="@+id/maxPortionTime" android:textColor="@color/colorPrimaryDark"
                                 android:background="@android:color/transparent" android:textAlignment="center"
-                                android:fontFamily="@font/flipbash" android:text="40"
+                                android:fontFamily="@font/flipbash" android:text="0"
                                 android:textCursorDrawable="@null"
                                 android:imeOptions="actionDone"/>
                     </LinearLayout>
@@ -151,7 +151,7 @@
                                 android:inputType="number"
                                 android:id="@+id/volume" android:textColor="@color/colorPrimaryDark"
                                 android:background="@android:color/transparent" android:textAlignment="center"
-                                android:fontFamily="@font/flipbash" android:text="10"
+                                android:fontFamily="@font/flipbash" android:text="0"
                                 android:textCursorDrawable="@null"
                                 android:imeOptions="actionDone"/>
                     </LinearLayout>
@@ -184,7 +184,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:inputType="number"
-                                    android:id="@+id/gss1" android:text="50" android:textAlignment="center"
+                                    android:id="@+id/gss1" android:text="0" android:textAlignment="center"
                                     android:textAllCaps="false"
                                     android:fontFamily="@font/flipbash" android:textColor="@color/colorPrimaryDark"
                                     android:layout_weight="1"
@@ -202,7 +202,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:inputType="number"
-                                    android:id="@+id/gss1max" android:layout_weight="1" android:text="55"
+                                    android:id="@+id/gss1max" android:layout_weight="1" android:text="0"
                                     android:textAlignment="center" android:textAllCaps="false"
                                     android:textColor="@color/colorPrimaryDark" android:fontFamily="@font/flipbash"
                                     android:background="@android:color/transparent"
@@ -236,7 +236,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:inputType="number"
-                                    android:id="@+id/gss2" android:text="50" android:textAlignment="center"
+                                    android:id="@+id/gss2" android:text="0" android:textAlignment="center"
                                     android:textAllCaps="false"
                                     android:fontFamily="@font/flipbash" android:textColor="@color/colorPrimaryDark"
                                     android:layout_weight="1"
@@ -254,7 +254,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:inputType="number"
-                                    android:id="@+id/gss2max" android:layout_weight="1" android:text="55"
+                                    android:id="@+id/gss2max" android:layout_weight="1" android:text="0"
                                     android:textAlignment="center" android:textAllCaps="false"
                                     android:textColor="@color/colorPrimaryDark" android:fontFamily="@font/flipbash"
                                     android:background="@android:color/transparent"
