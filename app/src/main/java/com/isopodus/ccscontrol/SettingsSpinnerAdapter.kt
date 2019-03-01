@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.isopodus.ccscontrol
 
 import android.content.Context
@@ -13,13 +15,15 @@ class SettingsSpinnerAdapter(context: Context, textViewResourceId: Int, objects:
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val v = super.getView(position, convertView, parent)
-        (v as TextView).setTextColor(context!!.resources.getColorStateList(colors[position]))
+        if(colors.size != 0)
+            (v as TextView).setTextColor(context!!.resources.getColorStateList(colors[position]))
         return v
     }
 
     override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
         val v = super.getDropDownView(position, convertView, parent)
-        (v as TextView).setTextColor(context!!.resources.getColorStateList(colors[position]))
+        if(colors.size != 0)
+            (v as TextView).setTextColor(context!!.resources.getColorStateList(colors[position]))
         return v
     }
 }

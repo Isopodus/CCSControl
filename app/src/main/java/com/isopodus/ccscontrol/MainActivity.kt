@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private val host = "http://ccsystem.in/stat2/ccscontrol/"
 
-    lateinit var sp: SharedPreferences
+    private lateinit var sp: SharedPreferences
     private var countersArray = ArrayList<String>()
     private var keysStates = ArrayList<Int>()
     private var isActive = true

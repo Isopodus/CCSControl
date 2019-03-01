@@ -37,4 +37,7 @@
     <string name="settings_volume">Громкость</string>
     <string name="settings_save">Сохранить</string>
     <string name="settings_seconds">%1$dсек</string>
+    <string name="toast_data_sent_ok">Данные успешно отправлены</string>
+    <string name="toast_data_sent_err">Произошла ошибка при отправке данных</string>
+    <string name="toast_data_sent_nokey">Ключ не вставлен, данные не отправлены</string>
 </resources>

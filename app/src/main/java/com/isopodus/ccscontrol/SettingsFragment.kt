@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.*
 import khttp.post
 import kotlinx.android.synthetic.main.fragment_settings.*
+import kotlinx.android.synthetic.main.fragment_settings.view.*
 import org.json.JSONArray
 import org.json.JSONObject
 import java.lang.Exception
@@ -20,12 +21,14 @@ import java.net.UnknownHostException
 import java.util.*
 import kotlin.concurrent.thread
 
-class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefreshLayout.OnRefreshListener {
+class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
 
     private val host = "http://ccsystem.in/stat2/ccscontrol/"
     private var listener: MainActivityListener? = null
 
     private lateinit var countersArray: ArrayList<String>
+    private lateinit var keyStates: ArrayList<Int>
+    private var calledOnRefresh = false
 
     @Suppress("OverridingDeprecatedMember", "DEPRECATION")
     override fun onAttach(activity: Activity?) {
@@ -51,6 +54,8 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
 
         refreshSpinner(view, countersArray, 0)
 
+        view.button.setOnClickListener(this)
+
         return view
     }
 
@@ -59,20 +64,99 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
         listener!!.setOpenedMenu(R.id.nav_settings)
     }
 
+    override fun onClick(v: View?) {
+        thread {
+            try {
+                val cid = spinner.getItemAtPosition(spinner.selectedItemPosition) as String
+                //Log.d("cid: ", cid)
+
+                if(keyStates[spinner.selectedItemPosition] == 2) {
+                    val payload = mapOf(
+                        "cid" to cid,
+                        "straitTime" to straitTime.text,
+                        "portionTime" to portionTime.text,
+                        "maxPortionTime" to maxPortionTime.text,
+                        "volume" to volume.text,
+                        "gss1" to gss1.text,
+                        "gss2" to gss2.text,
+                        "gss1max" to gss1max.text,
+                        "gss2max" to gss2max.text
+                    )
+                    val response = post(host + "sendSettings.php", data = payload)
+
+                    activity!!.runOnUiThread {
+                        if (response.statusCode == 200) {
+                            Toast.makeText(
+                                context,
+                                getString(R.string.toast_data_sent_ok),
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                context,
+                                getString(R.string.toast_data_sent_err),
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+                }
+                else {
+                    activity!!.runOnUiThread {
+                        Toast.makeText(
+                            context,
+                            getString(R.string.toast_data_sent_nokey),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+
+            } catch (e: Resources.NotFoundException) {
+                activity!!.runOnUiThread {
+                    Toast.makeText(
+                        context,
+                        getString(R.string.toast_server),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            } catch (e: UnknownHostException) {
+                activity!!.runOnUiThread {
+                    Toast.makeText(
+                        context,
+                        getString(R.string.toast_network),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            } catch (e: ConnectException) {
+                activity!!.runOnUiThread {
+                    Toast.makeText(
+                        context,
+                        getString(R.string.toast_network),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            } catch (e: Exception) {
+                Log.d("ERR", e.toString())
+            }
+        }
+    }
+
     override fun onRefresh() {
-        val position: Int
         val spinner = view!!.findViewById(R.id.spinner) as? Spinner
         if(spinner != null) {
-            position = spinner.selectedItemPosition
-            refreshSpinner(view, countersArray, position)
+            val prevPosition = spinner.selectedItemPosition
+            refreshSpinner(view, countersArray, prevPosition)
         }
+        if(!calledOnRefresh)
+            calledOnRefresh = true
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
-        //animate progress bar
-        if(progressBar != null)
-            progressBar.visibility = View.VISIBLE
+        if(!calledOnRefresh) {
+            //animate progress bar
+            if (progressBar != null)
+                progressBar.visibility = View.VISIBLE
+        }
 
         getSettings(spinner.getItemAtPosition(position).toString())
     }
@@ -114,6 +198,7 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
                     spinner.adapter = adapter
                     spinner.setSelection(prevPosition)
                 }
+                this.keyStates = keyStates
 
             } catch (e: Resources.NotFoundException) {
                 activity!!.runOnUiThread {

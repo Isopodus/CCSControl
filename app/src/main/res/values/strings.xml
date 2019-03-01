@@ -20,7 +20,9 @@
     <!--TOAST-->
     <string name="toast_network">Unable to get data, check network connection</string>
     <string name="toast_server">Server inaccessible, try again later</string>
-
+    <string name="toast_data_sent_ok">Data send successfully</string>
+    <string name="toast_data_sent_err">There was an error trying to send data</string>
+    <string name="toast_data_sent_nokey">Key is not inserted, data wasn\'t sent</string>
     <!--EMAIL-->
     <string name="email_email">Send email</string>
     <string name="email_message1">Message from</string>
