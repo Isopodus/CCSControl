@@ -6,7 +6,6 @@ import android.content.SharedPreferences
 import android.content.res.Resources
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.widget.SwipeRefreshLayout
 import android.util.Log
 import android.view.*
 import android.widget.Toast
@@ -25,7 +24,7 @@ import org.json.JSONException
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
+class InfoFragment : Fragment()/*, SwipeRefreshLayout.OnRefreshListener*/ {
 
     private val host = "http://ccsystem.in/stat2/ccscontrol/"
     private lateinit var sp: SharedPreferences
@@ -36,7 +35,6 @@ class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
 
     private var listener: MainActivityListener? = null
 
-    @Suppress("OverridingDeprecatedMember", "DEPRECATION")
     override fun onAttach(activity: Activity?) {
         super.onAttach(activity)
         if (activity is MainActivityListener) {
@@ -49,16 +47,13 @@ class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         savedInstanceState: Bundle?
     ): View? {
         val view =  inflater.inflate(R.layout.fragment_info, container, false)
-        sdf = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
-        sdfIn = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH)
-        sdfOut = SimpleDateFormat("HH:mm:ss dd-MM-yyyy", Locale.ENGLISH)
+        sdf = SimpleDateFormat("yyyy-MM-dd")
+        sdfIn = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+        sdfOut = SimpleDateFormat("HH:mm:ss dd-MM-yyyy")
 
         //load preferences
         sp = activity!!.getSharedPreferences("SP", Context.MODE_PRIVATE)
         username = sp.getString("USERNAME", "null")
-
-        //set refresh listener
-        view.refresh.setOnRefreshListener(this)
 
         return view
     }
@@ -71,10 +66,6 @@ class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         listener!!.setOpenedMenu(R.id.nav_home)
-    }
-
-    override fun onRefresh() {
-        getInfo(Date())
     }
 
     fun getInfo(date : Date) {
@@ -172,9 +163,6 @@ class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
                             }
                         }
 
-                        //make progress bar invisible
-                        if(refresh != null)
-                            refresh.isRefreshing = false
                         if(progressBar != null)
                             progressBar.visibility = View.GONE
                     }
@@ -185,8 +173,6 @@ class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
                         context,
                         getString(R.string.toast_server),
                         Toast.LENGTH_SHORT).show()
-                    if(refresh != null)
-                        refresh.isRefreshing = false
                 }
             } catch (e: UnknownHostException) {
                 activity!!.runOnUiThread {
@@ -194,8 +180,6 @@ class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
                         context,
                         getString(R.string.toast_network),
                         Toast.LENGTH_SHORT).show()
-                    if(refresh != null)
-                        refresh.isRefreshing = false
                 }
             } catch (e: ConnectException) {
                 activity!!.runOnUiThread {
@@ -204,13 +188,9 @@ class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
                         getString(R.string.toast_network),
                         Toast.LENGTH_SHORT
                     ).show()
-                    if(refresh != null)
-                        refresh.isRefreshing = false
                 }
             } catch (e: Exception) {
                 Log.d("ERR", e.toString())
-                if(refresh != null)
-                    refresh.isRefreshing = false
             }
         }
     }

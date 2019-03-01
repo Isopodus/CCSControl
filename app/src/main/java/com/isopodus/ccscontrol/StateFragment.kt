@@ -32,7 +32,6 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
 
     private var listener: MainActivityListener? = null
 
-    @Suppress("OverridingDeprecatedMember", "DEPRECATION")
     override fun onAttach(activity: Activity?) {
         super.onAttach(activity)
         if (activity is MainActivityListener) {
@@ -44,9 +43,9 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        sdf = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
-        sdfIn = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH)
-        sdfOut = SimpleDateFormat("HH:mm:ss dd-MM-yyyy", Locale.ENGLISH)
+        sdf = SimpleDateFormat("yyyy-MM-dd")
+        sdfIn = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+        sdfOut = SimpleDateFormat("HH:mm:ss dd-MM-yyyy")
         val view = inflater.inflate(R.layout.fragment_state, container, false)
         val countersArray = arguments!!.getStringArrayList("countersArray")
 
@@ -72,6 +71,7 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
 
     override fun onRefresh() {
         getState(spinner.selectedItemPosition)
+        refresh.isRefreshing = false
     }
 
     private fun getState(position: Int) {
@@ -159,8 +159,7 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
                     }
 
                     //make progress bar invisible
-                    if(refresh != null)
-                        refresh.isRefreshing = false
+                    refresh.isRefreshing = false
                     if(progressBar != null)
                         progressBar.visibility = View.INVISIBLE
                 }
@@ -171,8 +170,6 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
                         context,
                         getString(R.string.toast_server),
                         Toast.LENGTH_SHORT).show()
-                    if(refresh != null)
-                        refresh.isRefreshing = false
                 }
             }
             catch (e: UnknownHostException) {
@@ -181,8 +178,6 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
                         context,
                         getString(R.string.toast_network),
                         Toast.LENGTH_SHORT).show()
-                    if(refresh != null)
-                        refresh.isRefreshing = false
                 }
             }
             catch (e: ConnectException) {
@@ -192,14 +187,10 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
                         getString(R.string.toast_network),
                         Toast.LENGTH_SHORT
                     ).show()
-                    if(refresh != null)
-                        refresh.isRefreshing = false
                 }
             }
             catch (e: Exception) {
                 Log.d("ERR", e.toString())
-                if(refresh != null)
-                    refresh.isRefreshing = false
             }
         }
     }

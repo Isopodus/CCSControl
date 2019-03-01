@@ -10,6 +10,7 @@ import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.*
 import java.net.ConnectException
+import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import kotlin.concurrent.thread
 
@@ -17,7 +18,7 @@ import kotlin.concurrent.thread
 class LoginActivity : AppCompatActivity() {
     private val host = "http://ccsystem.in/stat2/ccscontrol/"
 
-    private lateinit var sp: SharedPreferences
+    lateinit var sp: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -92,11 +93,11 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun md5(s: String): String {
-        val md5 = "MD5"
+        val MD5 = "MD5"
         try {
             // Create MD5 Hash
             val digest = java.security.MessageDigest
-                .getInstance(md5)
+                .getInstance(MD5)
             digest.update(s.toByteArray())
             val messageDigest = digest.digest()
 

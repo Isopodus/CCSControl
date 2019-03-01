@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package com.isopodus.ccscontrol
 
 import android.content.Context

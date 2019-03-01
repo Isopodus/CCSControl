@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private val host = "http://ccsystem.in/stat2/ccscontrol/"
 
-    private lateinit var sp: SharedPreferences
+    lateinit var sp: SharedPreferences
     private var countersArray = ArrayList<String>()
     private var keysStates = ArrayList<Int>()
     private var isActive = true
@@ -270,10 +270,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 override fun run() {
                     if(isActive) {
                         updateData()
-                        Handler().postDelayed(this, 30000)
+                        Handler().postDelayed(this, 10000)
                     }
                 }
-            }, 30000)
+            }, 10000)
         }
     }
 
