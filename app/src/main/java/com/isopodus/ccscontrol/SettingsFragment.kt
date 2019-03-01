@@ -9,12 +9,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Gravity
 import android.widget.*
 import khttp.post
 import kotlinx.android.synthetic.main.fragment_settings.*
-import org.json.JSONArray
-import org.json.JSONException
 import org.json.JSONObject
 import java.lang.Exception
 import java.net.ConnectException
@@ -28,6 +25,7 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
     private val host = "http://ccsystem.in/stat2/ccscontrol/"
     private var listener: MainActivityListener? = null
 
+    @Suppress("OverridingDeprecatedMember", "DEPRECATION")
     override fun onAttach(activity: Activity?) {
         super.onAttach(activity)
         if (activity is MainActivityListener) {
@@ -70,7 +68,6 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
 
     override fun onRefresh() {
         getSettings(spinner.getItemAtPosition(spinner.selectedItemPosition).toString())
-        refresh.isRefreshing = false
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -140,7 +137,8 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
                         }
 
                         //make progress bar invisible
-                        refresh.isRefreshing = false
+                        if(refresh != null)
+                            refresh.isRefreshing = false
                         if(progressBar != null)
                             progressBar.visibility = View.INVISIBLE
                     }
@@ -151,6 +149,8 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
                         context,
                         getString(R.string.toast_server),
                         Toast.LENGTH_SHORT).show()
+                    if(refresh != null)
+                        refresh.isRefreshing = false
                 }
             } catch (e: UnknownHostException) {
                 activity!!.runOnUiThread {
@@ -158,6 +158,8 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
                         context,
                         getString(R.string.toast_network),
                         Toast.LENGTH_SHORT).show()
+                    if(refresh != null)
+                        refresh.isRefreshing = false
                 }
             } catch (e: ConnectException) {
                 activity!!.runOnUiThread {
@@ -166,9 +168,13 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
                         getString(R.string.toast_network),
                         Toast.LENGTH_SHORT
                     ).show()
+                    if(refresh != null)
+                        refresh.isRefreshing = false
                 }
             } catch (e: Exception) {
                 Log.d("ERR", e.toString())
+                if(refresh != null)
+                    refresh.isRefreshing = false
             }
         }
     }
