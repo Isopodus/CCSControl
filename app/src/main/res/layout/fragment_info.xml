@@ -12,18 +12,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="130dp"/>
-        <ScrollView
+        <android.support.v4.widget.SwipeRefreshLayout
                 xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/refresh"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fillViewport="true"
-                android:scrollbars="vertical"
-                android:isScrollContainer="false">
-            <LinearLayout
-                    android:id="@+id/scrollLinearLayout"
+                android:layout_height="match_parent">
+            <ScrollView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-            </LinearLayout>
-        </ScrollView >
+                    android:fillViewport="true"
+                    android:scrollbars="vertical"
+                    android:isScrollContainer="false">
+                <LinearLayout
+                        android:id="@+id/scrollLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                </LinearLayout>
+            </ScrollView >
+        </android.support.v4.widget.SwipeRefreshLayout>
     </FrameLayout>

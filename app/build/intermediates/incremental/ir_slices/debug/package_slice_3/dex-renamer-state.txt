@@ -1,4 +1,4 @@
-#Fri Mar 01 12:46:31 EET 2019
+#Fri Mar 01 13:50:13 EET 2019
 base.0=/home/isopodus/StudioProjects/CCSControl/app/build/intermediates/transforms/dexMerger/debug/3
 path.0=classes.dex
 renamed.0=classes.dex
