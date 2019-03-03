@@ -17,20 +17,18 @@ class SplashScreenActivity : AppCompatActivity(){
         setContentView(R.layout.activity_splash)
         val fadeOut = AlphaAnimation(0f, 1f)
         fadeOut.interpolator = AccelerateInterpolator()
-        fadeOut.duration = 1500
+        fadeOut.duration = 1000
 
         fadeOut.setAnimationListener(object : Animation.AnimationListener {
-            override fun onAnimationEnd(animation: Animation) {}
+            override fun onAnimationEnd(animation: Animation) {
+                val main = Intent(applicationContext, MainActivity::class.java)
+                startActivity(main)
+                finish()
+            }
             override fun onAnimationRepeat(animation: Animation) {}
             override fun onAnimationStart(animation: Animation) {}
         })
 
         splashImage.startAnimation(fadeOut)
-
-        Handler().postDelayed({
-            val main = Intent(applicationContext, MainActivity::class.java)
-            startActivity(main)
-            finish()
-        }, 1600.toLong())
     }
 }
