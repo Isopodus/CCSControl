@@ -44,6 +44,10 @@ class StateFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRefre
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        //set filter button invisible
+        listener!!.setOverflowMenuButtonVisibility(View.GONE)
+
         sdf = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
         sdfIn = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH)
         sdfOut = SimpleDateFormat("HH:mm:ss dd-MM-yyyy", Locale.ENGLISH)

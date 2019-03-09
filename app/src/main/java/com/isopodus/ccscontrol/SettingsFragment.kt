@@ -42,6 +42,10 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        //set filter button invisible
+        listener!!.setOverflowMenuButtonVisibility(View.GONE)
+
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
 
         countersArray = arguments!!.getStringArrayList("countersArray")

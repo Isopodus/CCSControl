@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import khttp.post
 import kotlinx.android.synthetic.main.activity_main.*
@@ -187,13 +188,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         //refresh info fragment
         val oldFragInfo = supportFragmentManager.findFragmentByTag("infoFragment") as?  InfoFragment
         if(oldFragInfo != null && oldFragInfo.isVisible)
-            oldFragInfo.getInfo(Date())
-
-        /*//refresh settings fragment
-        val oldFragSettings = supportFragmentManager.findFragmentByTag("settingsFragment")
-        if(oldFragSettings != null && oldFragSettings.isVisible) {
-            openSettingsFragment()
-        }*/
+            oldFragInfo.getInfo(Date(), sp.getBoolean("onlineOnly", false), sp.getBoolean("hasPortions", false))
 
         transaction.addToBackStack(null)
         transaction.commit()
@@ -290,16 +285,36 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
+        menu.findItem(R.id.checkbox_filter_online).isChecked = sp.getBoolean("onlineOnly", false)
+        menu.findItem(R.id.checkbox_filter_portions).isChecked = sp.getBoolean("hasPortions", false)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         super.onOptionsItemSelected(item)
         when(item.itemId) {
-            R.id.checkbox_filter_online -> item.isChecked = !item.isChecked
-            R.id.checkbox_filter_portions -> item.isChecked = !item.isChecked
+            R.id.checkbox_filter_online -> {
+                item.isChecked = !item.isChecked
+                sp.edit().putBoolean("onlineOnly", item.isChecked).apply()
+                updateData()
+            }
+            R.id.checkbox_filter_portions -> {
+                item.isChecked = !item.isChecked
+                sp.edit().putBoolean("hasPortions", item.isChecked).apply()
+                updateData()
+            }
+
         }
         return true
+    }
+
+    override fun setOverflowMenuButtonVisibility(visible: Int) {
+        if(toolbar != null) {
+            if(visible == View.VISIBLE)
+                onCreateOptionsMenu(toolbar.menu)
+            else if(visible == View.GONE)
+                toolbar.menu.clear()
+        }
     }
 
     public override fun onResume() {

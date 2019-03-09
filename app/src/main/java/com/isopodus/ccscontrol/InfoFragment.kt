@@ -48,6 +48,10 @@ class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        //set filter button visible
+        listener!!.setOverflowMenuButtonVisibility(View.VISIBLE)
+
         val view =  inflater.inflate(R.layout.fragment_info, container, false)
         sdf = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
         sdfIn = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH)
@@ -65,7 +69,7 @@ class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
 
     override fun onStart() {
         super.onStart()
-        getInfo(Date())
+        getInfo(Date(), sp.getBoolean("onlineOnly", false), sp.getBoolean("hasPortions", false))
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -74,10 +78,10 @@ class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
     }
 
     override fun onRefresh() {
-        getInfo(Date())
+        getInfo(Date(), sp.getBoolean("onlineOnly", false), sp.getBoolean("hasPortions", false))
     }
 
-    fun getInfo(date : Date) {
+    fun getInfo(date : Date, onlineOnly: Boolean = false, hasPortionsOnly: Boolean = false) {
         val jsonResponse = JSONArray()
 
         //get daily portions and straits on all counters
@@ -160,7 +164,23 @@ class InfoFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
                                     counterTile.statusImage.setImageResource(R.drawable.status_ok)
                                     counterTile.status.text = getString(R.string.info_status_ok)
                                 }
-                                view!!.scrollLinearLayout.addView(counterTile)
+
+                                if(onlineOnly && hasPortionsOnly) {
+                                    if(counterTile.status.text == getString(R.string.info_status_ok)
+                                        && counterTile.portionsCount.text != "0") //if online and has portions
+                                        view!!.scrollLinearLayout.addView(counterTile)
+                                }
+                                else if (onlineOnly) {
+                                    if(counterTile.status.text == getString(R.string.info_status_ok)) //if online
+                                        view!!.scrollLinearLayout.addView(counterTile)
+                                }
+                                else if (hasPortionsOnly) {
+                                    if(counterTile.portionsCount.text != "0") //if has portions
+                                        view!!.scrollLinearLayout.addView(counterTile)
+                                }
+                                else {
+                                    view!!.scrollLinearLayout.addView(counterTile)
+                                }
 
                                 //open chosen counter in state fragment
                                 counterTile.setOnClickListener {
