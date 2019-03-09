@@ -9,7 +9,6 @@
     <string name="nav_settings">Настройки</string>
     <string name="nav_send">Написать</string>
     <string name="nav_logout">Выйти</string>
-    <string name="button_refresh">Обновить</string>
     <string name="login_header">Вход в аккаунт</string>
     <string name="info_portions">Порций:</string>
     <string name="info_straits">Проливов:</string>
@@ -40,4 +39,5 @@
     <string name="toast_data_sent_ok">Данные успешно отправлены</string>
     <string name="toast_data_sent_err">Произошла ошибка при отправке данных</string>
     <string name="toast_data_sent_nokey">Ключ не вставлен, данные не отправлены</string>
+    <string name="checkbox_only_online">Только в сети</string>
 </resources>

@@ -14,8 +14,8 @@
     <string name="nav_send">Send</string>
     <string name="nav_logout">Logout</string>
 
-    <!--TOOLBAR-->
-    <string name="button_refresh">Refresh</string>
+    <!--TOOLS-->
+    <string name="checkbox_only_online">Online only</string>
 
     <!--TOAST-->
     <string name="toast_network">Unable to get data, check network connection</string>
