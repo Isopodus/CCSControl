@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-            android:id="@+id/action_filter"
-            android:orderInCategory="300"
-            android:title=""
-            android:icon="@drawable/ic_filter_list_24px"
-            app:showAsAction="ifRoom">
-    </item>
+            android:id="@+id/checkbox_filter_online"
+            android:title="@string/checkbox_online"
+            android:checkable="true"/>
     <item
-            android:id="@+id/checkbox_filter"
-            android:checkable="true"
-            android:title=""
-            app:actionViewClass="android.widget.CheckBox"
-            app:showAsAction="ifRoom|withText" />
+            android:id="@+id/checkbox_filter_portions"
+            android:title="@string/checkbox_has_portions"
+            android:checkable="true"/>
 </menu>

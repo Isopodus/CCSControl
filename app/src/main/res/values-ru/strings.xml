@@ -39,5 +39,6 @@
     <string name="toast_data_sent_ok">Данные успешно отправлены</string>
     <string name="toast_data_sent_err">Произошла ошибка при отправке данных</string>
     <string name="toast_data_sent_nokey">Ключ не вставлен, данные не отправлены</string>
-    <string name="checkbox_only_online">Только в сети</string>
+    <string name="checkbox_online">Онлайн</string>
+    <string name="checkbox_has_portions">Есть порции</string>
 </resources>

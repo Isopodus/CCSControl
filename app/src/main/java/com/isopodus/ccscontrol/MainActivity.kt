@@ -8,6 +8,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.support.design.widget.NavigationView
+import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+        toolbar.overflowIcon = ContextCompat.getDrawable(this, R.drawable.ic_filter_list_24px)
 
         //load preferences
         sp = getSharedPreferences("SP", Context.MODE_PRIVATE)
@@ -291,8 +293,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem) = run {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         super.onOptionsItemSelected(item)
+        when(item.itemId) {
+            R.id.checkbox_filter_online -> item.isChecked = !item.isChecked
+            R.id.checkbox_filter_portions -> item.isChecked = !item.isChecked
+        }
+        return true
     }
 
     public override fun onResume() {

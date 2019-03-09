@@ -15,7 +15,8 @@
     <string name="nav_logout">Logout</string>
 
     <!--TOOLS-->
-    <string name="checkbox_only_online">Online only</string>
+    <string name="checkbox_online">Online</string>
+    <string name="checkbox_has_portions">Has portions</string>
 
     <!--TOAST-->
     <string name="toast_network">Unable to get data, check network connection</string>
