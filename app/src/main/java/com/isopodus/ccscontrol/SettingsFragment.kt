@@ -67,32 +67,36 @@ class SettingsFragment : Fragment(), AdapterView.OnItemSelectedListener, SwipeRe
     override fun onClick(v: View?) {
         thread {
             try {
-                val cid = spinner.getItemAtPosition(spinner.selectedItemPosition) as String
-                //Log.d("cid: ", cid)
+            val cid = spinner.getItemAtPosition(spinner.selectedItemPosition) as String
+            //Log.d("cid: ", cid)
 
+                val payload = mapOf(
+                    "cid" to cid,
+                    "straitTime" to straitTime.text,
+                    "portionTime" to portionTime.text,
+                    "maxPortionTime" to maxPortionTime.text,
+                    "volume" to volume.text,
+                    "gss1" to gss1.text,
+                    "gss2" to gss2.text,
+                    "gss1max" to gss1max.text,
+                    "gss2max" to gss2max.text
+                )
                 if(keyStates[spinner.selectedItemPosition] == 2) {
-                    val payload = mapOf(
-                        "cid" to cid,
-                        "straitTime" to straitTime.text,
-                        "portionTime" to portionTime.text,
-                        "maxPortionTime" to maxPortionTime.text,
-                        "volume" to volume.text,
-                        "gss1" to gss1.text,
-                        "gss2" to gss2.text,
-                        "gss1max" to gss1max.text,
-                        "gss2max" to gss2max.text
-                    )
                     val response = post(host + "sendSettings.php", data = payload)
 
                     activity!!.runOnUiThread {
-                        if (response.statusCode == 200) {
-                            Toast.makeText(
+                        when {
+                            response.statusCode == 200 -> Toast.makeText(
                                 context,
                                 getString(R.string.toast_data_sent_ok),
                                 Toast.LENGTH_SHORT
                             ).show()
-                        } else {
-                            Toast.makeText(
+                            response.statusCode == 409 -> Toast.makeText(
+                                context,
+                                getString(R.string.toast_data_sent_nokey),
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            else -> Toast.makeText(
                                 context,
                                 getString(R.string.toast_data_sent_err),
                                 Toast.LENGTH_SHORT
